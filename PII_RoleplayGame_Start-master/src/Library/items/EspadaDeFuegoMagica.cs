@@ -1,8 +1,10 @@
-using System;
 namespace RoleplayGame.Items
 {
-    public class CapaDeInvisibilidad : IAttackItem, IItem, IDefenseItem
+    public class EspadaDeFuegoMagica : IItem, IDefenseItem, IAttackItem
     {
+        Magic magic = new Magic();
+        EspadaDeFuego espada = new EspadaDeFuego();
+
         /// <summary>
         /// El poder de ataque
         /// </summary>
@@ -11,7 +13,7 @@ namespace RoleplayGame.Items
         {
             get
             {
-                return 9999;
+                return espada.AttackPower * magic.AttackPower;
             }
         }
 
@@ -23,13 +25,13 @@ namespace RoleplayGame.Items
         {
             get
             {
-                return 1;
+                return magic.DefensePower;
             }
         }
 
         public override string ToString()
         {
-            return "capa de invisibilidad";
+            return "Espada de Fuego Magica";
         }
     }
 }

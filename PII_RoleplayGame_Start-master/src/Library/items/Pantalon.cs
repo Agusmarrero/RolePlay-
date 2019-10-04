@@ -1,11 +1,42 @@
-namespace RoleplayGame.Items.AttackPower
+namespace RoleplayGame.Items
 {
     public class Pantalon : IItem, IAttackItem, IDefenseItem
     {
-        public string Tipo => "Madera";
-        public string Color => "Verde"; 
-        public int AttackPower => 8000;
-        public int DefensePower => 1;
+        /// <summary>
+        /// El poder de ataque
+        /// </summary>
+        /// <value></value>
+        public int AttackPower
+        {
+            get
+            {
+                return 11;
+            }
+        }
 
+        public string Tipo
+        {
+            get
+            {
+                return "Madera";
+            }
+        }
+
+        /// <summary>
+        /// El poder de defensa
+        /// </summary>
+        /// <value></value>
+        public int DefensePower
+        {
+            get
+            {
+                return 800000000;
+            }
+        }
+
+        public override string ToString()
+        {
+            return "Pantalon";
+        }
     }
 }

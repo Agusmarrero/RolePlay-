@@ -1,13 +1,21 @@
 namespace RoleplayGame.Items
 {
     /// <summary>
-    /// Interfaz para crear elementos.
+    /// Espada de fuego.
     /// </summary>
     public class EspadaDeFuego : IItem, IAttackItem
     {
-        public string Tipo => "Fuego";
+        public int AttackPower
+        {
+            get
+            {
+                return 30;
+            }
+        }
 
-        public int AttackPower => 20;
-        
+        public override string ToString()
+        {
+            return "EspadaDeFuego";
+        }
     }
 }
