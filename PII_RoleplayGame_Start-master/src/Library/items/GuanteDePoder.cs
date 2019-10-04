@@ -1,8 +1,12 @@
-using System;
+using System.Collections.Generic;
+
 namespace RoleplayGame.Items
 {
-    public class CapaDeInvisibilidad : IAttackItem, IItem, IDefenseItem
+    public class GuanteDePoder : IItem, IAttackItem
     {
+        public List<Gemas> listaGemas = new List<Gemas>();
+        Gemas g = new Gemas();
+
         /// <summary>
         /// El poder de ataque
         /// </summary>
@@ -11,7 +15,7 @@ namespace RoleplayGame.Items
         {
             get
             {
-                return 9999;
+                return listaGemas.Count * 100000;
             }
         }
 
@@ -23,13 +27,13 @@ namespace RoleplayGame.Items
         {
             get
             {
-                return 1;
+                return 50;
             }
         }
 
         public override string ToString()
         {
-            return "capa de invisibilidad";
+            return "Guantelete de poder que mato a Tony";
         }
     }
 }
